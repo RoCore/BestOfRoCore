@@ -2,7 +2,7 @@
 
 namespace Test.Infrastructure.Data;
 
-public class IUserRepository
+public interface IUserRepository
 {
-    IEnumerable<User> SearchAsync()
+    Task<IEnumerable<User>> SearchAsync();
 }
