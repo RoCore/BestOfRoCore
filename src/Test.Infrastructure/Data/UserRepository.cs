@@ -1,11 +1,8 @@
-﻿using TestApi.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using TestApi.Domain.Models;
 
 namespace Test.Infrastructure.Data;
 
-public class UserRepository : IUserRepository
+public class TestContext : DbContext, IProductRepository
 {
-    public async Task<IEnumerable<User>> SearchAsync()
-    {
-        return await Task.FromResult(new List<User> { new User { Created = DateTime.UtcNow, Id = 1, Name = "Chris", IsActive = true } });
-    }
 }
